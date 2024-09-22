@@ -12,16 +12,19 @@
         body {
             -webkit-font-smoothing: antialiased;
             font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-            background-image: url('https://raw.githubusercontent.com/we11cheng/we11cheng.github.io/master/bg.jpg');
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-size: 85%;
             margin: 0;
         }
-        
+
         h2 {
             font-size: 220%;
             font-weight: 400;
         }
-        
+
         .content {
             position: absolute;
             width: 100%;
@@ -29,22 +32,29 @@
             transform: translate(0, -50%);
             text-align: center;
         }
-        
+
         .timer {
             font-size: 180%;
             line-height: 1.5;
             margin: 1em 0;
         }
-        
+
         .timer b {
             color: rgb(253, 99, 125);
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="content">
-        <h2>和my在一起的第</h2>
+        <h2>和my♥在一起的第</h2>
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
@@ -102,4 +112,3 @@
 </body>
 
 </html>
-
